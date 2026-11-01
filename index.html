@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandung Culinary Discovery - Explore Local Food & Restaurants</title>
+    <meta name="description" content="Discover authentic Bandung culinary experiences. Browse local restaurants, compare menus, and find the best food places in Bandung City.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍜</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>Bandung<span class="logo-highlight">Food</span>Explorer</span>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                <a href="#restaurants" class="nav-link"><i class="fas fa-store"></i> Restaurants</a>
+                <a href="#discoveries" class="nav-link"><i class="fas fa-compass"></i> Discoveries</a>
+                <a href="#compare" class="nav-link"><i class="fas fa-balance-scale"></i> Compare</a>
+                <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About Bandung</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-outline" id="locationBtn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Bandung City</span>
+                </button>
+                <button class="btn btn-primary" id="loginBtn">
+                    <i class="fas fa-user"></i>
+                    <span>Sign In</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Bandung's <span class="highlight">Culinary Treasures</span></h1>
+                <p class="hero-subtitle">Explore authentic local restaurants, compare menus, and find your next favorite meal in Bandung City</p>
+                
+                <div class="search-container">
+                    <div class="search-input-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search restaurants, dishes, or cuisines..." class="search-input">
+                        <button class="btn btn-primary search-btn">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </div>
+                    <div class="search-tags">
+                        <span class="tag">Nasi Goreng</span>
+                        <span class="tag">Sate Bandung</span>
+                        <span class="tag">Bakso Malang</span>
+                        <span class="tag">Mie Kocok</span>
+                        <span class="tag">Es Campur</span>
+                    </div>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>150+</h3>
+                        <p>Local Restaurants</p>
+                    </div>
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Authentic Dishes</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4.5★</h3>
+                        <p>Average Rating</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Updated Menus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-utensils"></i>
+                    <p>Bandung Culinary Scene</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section" id="restaurants">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured <span class="highlight">Restaurants</span></h2>
+                <p>Top-rated culinary spots in Bandung City</p>
+                <a href="#all-restaurants" class="view-all">
+                    View All <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="restaurants-grid" id="restaurantsGrid">
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section class="discoveries-section" id="discoveries">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recent <span class="highlight">Discoveries</span></h2>
+                <p>Latest food finds and culinary experiences</p>
+            </div>
+            
+            <div class="discoveries-grid" id="discoveriesGrid">
+                
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="compare-section" id="compare">
+        <div class="container">
+            <div class="section-header">
+                <h2>Compare <span class="highlight">Restaurants</span></h2>
+                <p>Side-by-side comparison to help you decide</p>
+            </div>
+            
+            <div class="compare-container">
+                <div class="compare-placeholder" id="comparePlaceholder">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Select restaurants to compare</h3>
+                    <p>Choose 2-3 restaurants from our listings to compare menus, prices, and ratings</p>
+                    <button class="btn btn-primary" id="startCompareBtn">
+                        Start Comparing
+                    </button>
+                </div>
+                <div class="compare-results" id="compareResults" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Bandung <span class="highlight">Culinary Heritage</span></h2>
+                <p>Celebrating the rich food culture of Bandung City</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>The Heart of West Java's Cuisine</h3>
+                    <p>Bandung, known as the "Paris of Java," offers a unique blend of traditional Sundanese flavors with modern culinary innovations. From street food stalls to fine dining restaurants, our platform brings together the best of Bandung's food scene.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Fresh Ingredients</h4>
+                            <p>Local produce from Lembang and surrounding highlands</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-pepper-hot"></i>
+                            <h4>Authentic Flavors</h4>
+                            <p>Traditional recipes passed down through generations</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h4>Community Focus</h4>
+                            <p>Supporting local businesses and culinary artisans</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-landmark"></i>
+                        <p>Bandung City Heritage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="#" class="logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>Bandung<span class="logo-highlight">Food</span>Explorer</span>
+                    </a>
+                    <p class="footer-description">
+                        Connecting food lovers with Bandung's best culinary experiences since 2026.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <a href="#restaurants" class="footer-link">Restaurants</a>
+                    <a href="#discoveries" class="footer-link">Food Discoveries</a>
+                    <a href="#compare" class="footer-link">Compare</a>
+                    <a href="#about" class="footer-link">About Bandung</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#" class="footer-link">Help Center</a>
+                    <a href="#" class="footer-link">Contact Us</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for new restaurant discoveries</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="newsletter-input">
+                        <button class="btn btn-primary newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bandung Food Explorer. All rights reserved. Celebrating Bandung's culinary heritage.</p>
+                <p>Made with <i class="fas fa-heart" style="color: #e74c3c;"></i> in Bandung City</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="modal" id="restaurantModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
+        <div class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link active"><i class="fas fa-home"></i> Home</a>
+            <a href="#restaurants" class="mobile-nav-link"><i class="fas fa-store"></i> Restaurants</a>
+            <a href="#discoveries" class="mobile-nav-link"><i class="fas fa-compass"></i> Discoveries</a>
+            <a href="#compare" class="mobile-nav-link"><i class="fas fa-balance-scale"></i> Compare</a>
+            <a href="#about" class="mobile-nav-link"><i class="fas fa-info-circle"></i> About Bandung</a>
+            <div class="mobile-nav-divider"></div>
+            <button class="btn btn-outline mobile-nav-btn">
+                <i class="fas fa-map-marker-alt"></i> Bandung City
+            </button>
+            <button class="btn btn-primary mobile-nav-btn">
+                <i class="fas fa-user"></i> Sign In
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

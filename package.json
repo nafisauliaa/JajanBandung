@@ -1,0 +1,22 @@
+{
+  "name": "culinary-bandung-discovery",
+  "version": "1.0.0",
+  "description": "Web-based culinary discovery platform for Bandung City with mobile-friendly design",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "culinary",
+    "bandung",
+    "food-discovery",
+    "restaurant",
+    "menu"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
